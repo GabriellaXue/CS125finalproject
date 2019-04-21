@@ -36,6 +36,18 @@ public final class MainActivity extends AppCompatActivity {
     /**
      * max index.
      */
+    /**
+     * prevent duplicate click.
+     */
+    private int counterOne;
+    private int counterTwo;
+    private int counterThree;
+    private int counterFour;
+    private int counterFive;
+    private int counterSix;
+    private int counterSeven;
+    private int counterEight;
+    private int counterNine;
     private final int maxIndex = 3;
     /**
      * Run when this activity comes to the foreground.
@@ -60,15 +72,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    one.setBackgroundColor(playerone);
-                    gameBoard.setBoard(0, 0, 1);
-                } else {
-                    one.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(0, 0, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterOne++;
+                if (counterOne == 1) {
+                    if (count % 2 == 1) {
+                        one.setBackgroundColor(playerone);
+                        gameBoard.setBoard(0, 0, 1);
+                    } else {
+                        one.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(0, 0, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -76,15 +91,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    two.setBackgroundColor(playerone);
-                    gameBoard.setBoard(1, 0, 1);
-                } else {
-                    two.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(1, 0, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterTwo++;
+                if (counterTwo == 1) {
+                    if (count % 2 == 1) {
+                        two.setBackgroundColor(playerone);
+                        gameBoard.setBoard(1, 0, 1);
+                    } else {
+                        two.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(1, 0, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -92,15 +110,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    three.setBackgroundColor(playerone);
-                    gameBoard.setBoard(2, 0, 1);
-                } else {
-                    three.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(2, 0, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterThree++;
+                if (counterThree == 1) {
+                    if (count % 2 == 1) {
+                        three.setBackgroundColor(playerone);
+                        gameBoard.setBoard(2, 0, 1);
+                    } else {
+                        three.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(2, 0, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -108,15 +129,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    four.setBackgroundColor(playerone);
-                    gameBoard.setBoard(0, 1, 1);
-                } else {
-                    four.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(0, 1, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterFour++;
+                if (counterFour == 1) {
+                    if (count % 2 == 1) {
+                        four.setBackgroundColor(playerone);
+                        gameBoard.setBoard(0, 1, 1);
+                    } else {
+                        four.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(0, 1, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -124,15 +148,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    five.setBackgroundColor(playerone);
-                    gameBoard.setBoard(1, 1, 1);
-                } else {
-                    five.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(1, 1, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterFive++;
+                if (counterFive == 1) {
+                    if (count % 2 == 1) {
+                        five.setBackgroundColor(playerone);
+                        gameBoard.setBoard(1, 1, 1);
+                    } else {
+                        five.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(1, 1, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -140,15 +167,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    six.setBackgroundColor(playerone);
-                    gameBoard.setBoard(2, 1, 1);
-                } else {
-                    six.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(2, 1, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterSix++;
+                if (counterSix == 1) {
+                    if (count % 2 == 1) {
+                        six.setBackgroundColor(playerone);
+                        gameBoard.setBoard(2, 1, 1);
+                    } else {
+                        six.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(2, 1, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -156,15 +186,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    seven.setBackgroundColor(playerone);
-                    gameBoard.setBoard(0, 2, 1);
-                } else {
-                    seven.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(0, 2, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterSeven++;
+                if (counterSeven == 1) {
+                    if (count % 2 == 1) {
+                        seven.setBackgroundColor(playerone);
+                        gameBoard.setBoard(0, 2, 1);
+                    } else {
+                        seven.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(0, 2, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -172,15 +205,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    eight.setBackgroundColor(playerone);
-                    gameBoard.setBoard(1, 2, 1);
-                } else {
-                    eight.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(1, 2, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterEight++;
+                if (counterEight == 1) {
+                    if (count % 2 == 1) {
+                        eight.setBackgroundColor(playerone);
+                        gameBoard.setBoard(1, 2, 1);
+                    } else {
+                        eight.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(1, 2, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -188,15 +224,18 @@ public final class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(final View v) {
                 count++;
-                if (count % 2 == 1) {
-                    nine.setBackgroundColor(playerone);
-                    gameBoard.setBoard(2, 2, 1);
-                } else {
-                    nine.setBackgroundColor(playertwo);
-                    gameBoard.setBoard(2, 2, 2);
-                }
-                if (gameBoard.winnerId() > 0) {
-                    displayWinner(gameBoard.winnerId());
+                counterNine++;
+                if (counterNine == 1) {
+                    if (count % 2 == 1) {
+                        nine.setBackgroundColor(playerone);
+                        gameBoard.setBoard(2, 2, 1);
+                    } else {
+                        nine.setBackgroundColor(playertwo);
+                        gameBoard.setBoard(2, 2, 2);
+                    }
+                    if (gameBoard.winnerId() > 0) {
+                        displayWinner(gameBoard.winnerId());
+                    }
                 }
             }
         });
@@ -218,6 +257,15 @@ public final class MainActivity extends AppCompatActivity {
             findViewById(R.id.eight).setBackgroundColor(playerone);
             findViewById(R.id.nine).setBackgroundColor(playerone);
             gameBoard.clearBoard();
+            counterOne = 0;
+            counterTwo = 0;
+            counterThree = 0;
+            counterFour = 0;
+            counterFive = 0;
+            counterSix = 0;
+            counterSeven = 0;
+            counterEight = 0;
+            counterNine = 0;
         }
         if (index == 2) {
             findViewById(R.id.one).setBackgroundColor(playertwo);
@@ -230,6 +278,15 @@ public final class MainActivity extends AppCompatActivity {
             findViewById(R.id.eight).setBackgroundColor(playertwo);
             findViewById(R.id.nine).setBackgroundColor(playertwo);
             gameBoard.clearBoard();
+            counterOne = 0;
+            counterTwo = 0;
+            counterThree = 0;
+            counterFour = 0;
+            counterFive = 0;
+            counterSix = 0;
+            counterSeven = 0;
+            counterEight = 0;
+            counterNine = 0;
         }
 
     }

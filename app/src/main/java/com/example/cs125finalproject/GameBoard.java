@@ -31,7 +31,6 @@ public class GameBoard extends AppCompatActivity {
             board[row][column] = playerId;
         }
     }
-
     /**
      * Check if there's a winner
      * @return string
