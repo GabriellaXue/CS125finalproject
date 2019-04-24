@@ -2,12 +2,11 @@ package com.example.cs125finalproject;
 
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import com.example.cs125finalproject.GameBoard;
-import java.util.ArrayList;
 
 
 
@@ -58,6 +57,9 @@ public final class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.music);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
 
         final ImageView one = findViewById(R.id.one);
         final ImageView two = findViewById(R.id.two);
@@ -288,6 +290,5 @@ public final class MainActivity extends AppCompatActivity {
             counterEight = 0;
             counterNine = 0;
         }
-
     }
 }
