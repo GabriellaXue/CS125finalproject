@@ -1,11 +1,13 @@
 package com.example.cs125finalproject;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -70,6 +72,7 @@ public final class MainActivity extends AppCompatActivity {
         final ImageView seven = findViewById(R.id.seven);
         final ImageView eight = findViewById(R.id.eight);
         final ImageView nine = findViewById(R.id.nine);
+        restartClicked();
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -290,5 +293,14 @@ public final class MainActivity extends AppCompatActivity {
             counterEight = 0;
             counterNine = 0;
         }
+    }
+    private void restartClicked() {
+        Button restart = (Button) findViewById(R.id.restart);
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Start.class));
+            }
+        });
     }
 }
