@@ -13,6 +13,7 @@ public class Start extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         configureNextButton();
+        goToNextButton();
 
     }
     private void configureNextButton() {
@@ -21,6 +22,16 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Start.this, MainActivity.class));
+            }
+        });
+    }
+    private void goToNextButton() {
+        final Button about = findViewById(R.id.About);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent aboutActivity = new Intent(Start.this, guideline.class);
+                startActivity(aboutActivity);
             }
         });
     }
