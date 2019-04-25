@@ -35,6 +35,11 @@ public final class MainActivity extends AppCompatActivity {
      */
     private int count;
     /**
+     * music player.
+     */
+    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer2;
+    /**
      * max index.
      */
     /**
@@ -59,9 +64,12 @@ public final class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.music);
+        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.music);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
+        mediaPlayer2 = MediaPlayer.create(MainActivity.this, R.raw.tada);
+        mediaPlayer2.setLooping(false);
+
 
         final ImageView one = findViewById(R.id.one);
         final ImageView two = findViewById(R.id.two);
@@ -246,6 +254,7 @@ public final class MainActivity extends AppCompatActivity {
         });
 
     }
+
     /**
      * display winner.
      * @param index index of winner
@@ -262,6 +271,8 @@ public final class MainActivity extends AppCompatActivity {
             findViewById(R.id.eight).setBackgroundColor(playerone);
             findViewById(R.id.nine).setBackgroundColor(playerone);
             gameBoard.clearBoard();
+            mediaPlayer.stop();
+            mediaPlayer2.start();
             counterOne = 0;
             counterTwo = 0;
             counterThree = 0;
@@ -284,6 +295,8 @@ public final class MainActivity extends AppCompatActivity {
             findViewById(R.id.eight).setBackgroundColor(playertwo);
             findViewById(R.id.nine).setBackgroundColor(playertwo);
             gameBoard.clearBoard();
+            mediaPlayer.stop();
+            mediaPlayer2.start();
             counterOne = 0;
             counterTwo = 0;
             counterThree = 0;
@@ -300,6 +313,7 @@ public final class MainActivity extends AppCompatActivity {
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mediaPlayer.stop();
                 startActivity(new Intent(MainActivity.this, Start.class));
             }
         });
