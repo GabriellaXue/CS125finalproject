@@ -271,6 +271,7 @@ public final class MainActivity extends AppCompatActivity {
             counterSeven = 0;
             counterEight = 0;
             counterNine = 0;
+
         }
         if (index == 2) {
             findViewById(R.id.one).setBackgroundColor(playertwo);
@@ -295,7 +296,7 @@ public final class MainActivity extends AppCompatActivity {
         }
     }
     private void restartClicked() {
-        Button restart = (Button) findViewById(R.id.restart);
+        Button restart = findViewById(R.id.restart);
         restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

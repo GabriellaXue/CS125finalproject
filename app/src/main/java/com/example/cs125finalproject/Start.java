@@ -16,7 +16,7 @@ public class Start extends AppCompatActivity {
 
     }
     private void configureNextButton() {
-        final Button startActivity = (Button) findViewById(R.id.Start);
+        final Button startActivity = findViewById(R.id.Start);
         startActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
